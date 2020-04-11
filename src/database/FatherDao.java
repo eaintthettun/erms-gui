@@ -59,7 +59,7 @@ public class FatherDao {
 	public static Father getFatherByNrc(String father_nrc){
 		try{
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"select * from father where father_nrc=?");
+					"select * from father where father_nrc=? and father_nrc!=''");
 			stmt.setString(1, father_nrc);
 			ResultSet rs=stmt.executeQuery();
 			if(rs.next()){
@@ -84,7 +84,7 @@ public class FatherDao {
 		try {
 
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"update father set father_name=?,father_name_mm=?,father_ethnic=?,father_religion=?,father_birth_place=?,father_address=? where father_nrc=?");
+					"update father set father_name=?,father_name_mm=?,father_ethnic=?,father_religion=?,father_birth_place=?,father_address=? where father_nrc=? and father_nrc!=''");
 			stmt.setString(1, father.getFather_name());
 			stmt.setString(2, father.getFather_name_mm());
 			stmt.setString(3, father.getFather_ethnic());
@@ -105,7 +105,7 @@ public class FatherDao {
 		try {
 
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"delete from father where father_nrc=?");
+					"delete from father where father_nrc=? and father_nrc!=''");
 			stmt.setString(1,father_nrc);
 			stmt.executeUpdate();
 			return true;

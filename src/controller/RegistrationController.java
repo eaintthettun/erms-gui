@@ -143,18 +143,18 @@ public class RegistrationController {
 		else{
 			std.setStd_name(temp);
 		}
-		
+//		
 		temp = this.myStudentView.getTxtNameMM().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Student Name (MM)");
-		}
-		else if(Checker.checkTextLength(temp, 60)){
-			warning.add("Student Name (MM) is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Student Name (MM)");
+//		}
+//		else if(Checker.checkTextLength(temp, 60)){
+//			warning.add("Student Name (MM) is too long!");
+//		}
+//		else{
 			std.setStd_name_mm(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtEntranceID().getText();
 		if(Checker.checkRequired(temp)){
 			warning.add("Please Enter Student Entrance ID");
@@ -170,282 +170,282 @@ public class RegistrationController {
 			std.setStd_gender("M");
 		else
 			std.setStd_gender("F");
-		
+//		
 		temp = this.myStudentView.getTxtEthnicGroup().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Student Ethnic Type is missing");
-		}else if(Checker.checkTextLength(temp, 20)){
-			warning.add("Student Ethnic Type should be less than 20 characters");
-		}else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Student Ethnic Type is missing");
+//		}else if(Checker.checkTextLength(temp, 20)){
+//			warning.add("Student Ethnic Type should be less than 20 characters");
+//		}else{
 			std.setStd_ethnic(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtReligion().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Student Religion is missing");
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add("Student Religion should be less than 30 characters");
-		}else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Student Religion is missing");
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add("Student Religion should be less than 30 characters");
+//		}else{
 			std.setStd_religion(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtNRCNo().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Student NRC No.");
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add("Student Student NRC No. too long");
-		}else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Student NRC No.");
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add("Student Student NRC No. too long");
+//		}else{
 			std.setStd_nrc(temp);
-		}
-		
-		if(this.myStudentView.getDateChooser().getDate()!=null){
+//		}
+//		
+//		if(this.myStudentView.getDateChooser().getDate()!=null){
 			std.setStd_dob(this.myStudentView.getDateChooser().getDate());
-		}else
-			warning.add("Please Choose Student Date Of Birth");
+//		}else
+//			warning.add("Please Choose Student Date Of Birth");
 		
 		int index = this.myStudentView.getComboBoxMajor().getSelectedIndex();
 		std.setMajor_code(MajorDao.getPrimaryMajorCode().get(index));
 		
 		temp = this.myStudentView.getTxtPhone().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Student Phone No.");
-		}
-		else if(!temp.matches("\\d*")){
-			warning.add("Please Enter The Correct Phone No.");
-		}
-		else if(Checker.checkTextLength(temp, 15)){
-			warning.add("Phone No. is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Student Phone No.");
+//		}
+//		else if(!temp.matches("\\d*")){
+//			warning.add("Please Enter The Correct Phone No.");
+//		}
+//		else if(Checker.checkTextLength(temp, 15)){
+//			warning.add("Phone No. is too long!");
+//		}
+//		else{
 			std.setStd_phone(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtEmail().getText();
-		if(Checker.checkTextLength(temp, 50)){
-			warning.add("Email too long!");
-		}
-		else{
+//		if(Checker.checkTextLength(temp, 50)){
+//			warning.add("Email too long!");
+//		}
+//		else{
 			std.setStd_email(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtBirthPlace().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Student Birth Place");
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add("Birth Place is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Student Birth Place");
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add("Birth Place is too long!");
+//		}
+//		else{
 			std.setStd_birth_place(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtPermAddr().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Student Permanent Address");
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add("Permanent Address is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Student Permanent Address");
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add("Permanent Address is too long!");
+//		}
+//		else{
 			std.setStd_addr_perm(temp);
-		}
-		
+//		}
+//		
 		temp = this.myStudentView.getTxtCurrentAddr().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Student's current address is missing");
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add("Current Address is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Student's current address is missing");
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add("Current Address is too long!");
+//		}
+//		else{
 			std.setStd_addr_curr(temp);
-		}
+//		}
 		
 		/*
 		 * Matriculation Section Starts Here
 		 */
 		
 		temp = this.myRightPane.getMatSectionView().getTxtGrade10RollNo().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Please Enter Grade-10 Roll No.");
-		}else if(Checker.checkTextLength(temp, 20)){
-			warning.add("Student's Grade-10 Roll No. is too long!");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Please Enter Grade-10 Roll No.");
+//		}else if(Checker.checkTextLength(temp, 20)){
+//			warning.add("Student's Grade-10 Roll No. is too long!");
+//		}
+//		else{
 			std.setStd_mat_id(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getMatSectionView().getTxtYearOfMat().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("Student's Matriculated Year is missing");
-		}else if(temp.length()!=4){
-			warning.add("Student's Matriculated Year must be 4 digits");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("Student's Matriculated Year is missing");
+//		}else if(temp.length()!=4){
+//			warning.add("Student's Matriculated Year must be 4 digits");
+//		}
+//		else{
 			std.setStd_mat_year(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getMatSectionView().getTxtDeptMat().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add("You can't leave the Dept. where Student is matriculated as blank");
-		}else if(Checker.checkTextLength(temp, 50)){
-			warning.add("String overflow at Passed Dept.");
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add("You can't leave the Dept. where Student is matriculated as blank");
+//		}else if(Checker.checkTextLength(temp, 50)){
+//			warning.add("String overflow at Passed Dept.");
+//		}
+//		else{
 			std.setStd_mat_dept(temp);
-		}
-		
+//		}
+//		
 		/*
 		 * Parents Section (Father) Starts Here
 		 */
 		
 		Father f = new Father();
-		
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherAddr().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Job/Address"));
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add(MyConstants.msgLength("Father Job/Address", 150));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Job/Address"));
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add(MyConstants.msgLength("Father Job/Address", 150));
+//		}
+//		else{
 			f.setFather_address(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherBirthPlace().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Birth Place"));
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add(MyConstants.msgLength("Father Birth Place", 150));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Birth Place"));
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add(MyConstants.msgLength("Father Birth Place", 150));
+//		}
+//		else{
 			f.setFather_birth_place(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherEthnic().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Ethnic Type"));
-		}else if(Checker.checkTextLength(temp, 20)){
-			warning.add(MyConstants.msgLength("Father Ethnic Type", 20));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Ethnic Type"));
+//		}else if(Checker.checkTextLength(temp, 20)){
+//			warning.add(MyConstants.msgLength("Father Ethnic Type", 20));
+//		}
+//		else{
 			f.setFather_ethnic(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherNameEN().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Name (EN)"));
-		}else if(Checker.checkTextLength(temp, 60)){
-			warning.add(MyConstants.msgLength("Father Name (EN)", 60));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Name (EN)"));
+//		}else if(Checker.checkTextLength(temp, 60)){
+//			warning.add(MyConstants.msgLength("Father Name (EN)", 60));
+//		}
+//		else{
 			f.setFather_name(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherNameMM().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Name (MM)"));
-		}else if(Checker.checkTextLength(temp, 60)){
-			warning.add(MyConstants.msgLength("Father Name (MM)", 60));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Name (MM)"));
+//		}else if(Checker.checkTextLength(temp, 60)){
+//			warning.add(MyConstants.msgLength("Father Name (MM)", 60));
+//		}
+//		else{
 			f.setFather_name_mm(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherNRC().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father NRC No."));
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add(MyConstants.msgLength("Father NRC No.", 30));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father NRC No."));
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add(MyConstants.msgLength("Father NRC No.", 30));
+//		}
+//		else{
 			std.setFather_nrc(temp);
 			f.setFather_nrc(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtFatherReligion().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Father Religion"));
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add(MyConstants.msgLength("Father Religion", 30));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Father Religion"));
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add(MyConstants.msgLength("Father Religion", 30));
+//		}
+//		else{
 			f.setFather_religion(temp);
-		}
-		
-		/*
-		 * Parents Section (Mother) Starts Here
-		 */
-		
+//		}
+//		
+//		/*
+//		 * Parents Section (Mother) Starts Here
+//		 */
+//		
 		Mother m = new Mother();
-		
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherAddr().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Job/Address"));
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add(MyConstants.msgLength("Mother Job/Address", 150));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Job/Address"));
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add(MyConstants.msgLength("Mother Job/Address", 150));
+//		}
+//		else{
 			m.setMother_address(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherBirthPlace().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Birth Place"));
-		}else if(Checker.checkTextLength(temp, 150)){
-			warning.add(MyConstants.msgLength("Mother Birth Place", 150));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Birth Place"));
+//		}else if(Checker.checkTextLength(temp, 150)){
+//			warning.add(MyConstants.msgLength("Mother Birth Place", 150));
+//		}
+//		else{
 			m.setMother_birth_place(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherEthnic().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Ethnic Type"));
-		}else if(Checker.checkTextLength(temp, 20)){
-			warning.add(MyConstants.msgLength("Mother Ethnic Type", 20));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Ethnic Type"));
+//		}else if(Checker.checkTextLength(temp, 20)){
+//			warning.add(MyConstants.msgLength("Mother Ethnic Type", 20));
+//		}
+//		else{
 			m.setMother_ethnic(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherNameEN().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Name (EN)"));
-		}else if(Checker.checkTextLength(temp, 60)){
-			warning.add(MyConstants.msgLength("Mother Name (EN)", 60));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Name (EN)"));
+//		}else if(Checker.checkTextLength(temp, 60)){
+//			warning.add(MyConstants.msgLength("Mother Name (EN)", 60));
+//		}
+//		else{
 			m.setMother_name(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherNameMM().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Name (MM)"));
-		}else if(Checker.checkTextLength(temp, 60)){
-			warning.add(MyConstants.msgLength("Mother Name (MM)", 60));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Name (MM)"));
+//		}else if(Checker.checkTextLength(temp, 60)){
+//			warning.add(MyConstants.msgLength("Mother Name (MM)", 60));
+//		}
+//		else{
 			m.setMother_name_mm(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherNRC().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother NRC No."));
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add(MyConstants.msgLength("Mother NRC No.", 30));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother NRC No."));
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add(MyConstants.msgLength("Mother NRC No.", 30));
+//		}
+//		else{
 			std.setMother_nrc(temp);
 			m.setMother_nrc(temp);
-		}
-		
+//		}
+//		
 		temp = this.myRightPane.getParentsView().getTxtMotherReligion().getText();
-		if(Checker.checkRequired(temp)){
-			warning.add(MyConstants.msgRequired("Mother Religion"));
-		}else if(Checker.checkTextLength(temp, 30)){
-			warning.add(MyConstants.msgLength("Mother Religion", 30));
-		}
-		else{
+//		if(Checker.checkRequired(temp)){
+//			warning.add(MyConstants.msgRequired("Mother Religion"));
+//		}else if(Checker.checkTextLength(temp, 30)){
+//			warning.add(MyConstants.msgLength("Mother Religion", 30));
+//		}
+//		else{
 			m.setMother_religion(temp);
-		}
-		
+//		}
+//		
 		/*
 		 * Photo Section Starts Here
 		 */
@@ -471,8 +471,9 @@ public class RegistrationController {
 				if(!StudentDao.saveStudentPhoto(photo))
 					JOptionPane.showMessageDialog(this.myStudentView,"Error Saving Photo In Database","Error Message",JOptionPane.ERROR_MESSAGE);
 			}
-			
+
 			if(!(StudentDao.saveStudent(std) & FatherDao.saveFather(f) & MotherDao.saveMother(m)))
+//			if(!(StudentDao.saveStudent(std)))
 				JOptionPane.showMessageDialog(this.myStudentView,"Error Saving Student Info In Database","Error Message",JOptionPane.ERROR_MESSAGE);
 			else{
 				JOptionPane.showMessageDialog(this.myStudentView, "Sucessfully Registered","Information Message",JOptionPane.INFORMATION_MESSAGE);

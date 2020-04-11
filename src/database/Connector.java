@@ -11,8 +11,8 @@ public class Connector {
 	static{
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3309/erms";
-			CON = DriverManager.getConnection(url,"YOUR_DB_USERNAME","YOUR_DB_PASSWORD");
+			String url = "jdbc:mysql://localhost:3306/erms";
+			CON = DriverManager.getConnection(url,"root","rootpassword");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

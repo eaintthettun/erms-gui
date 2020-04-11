@@ -28,7 +28,12 @@ public class Converter {
 	
 	public static String convertDateToStringSQL(Date d)
 	{
-		return sql.format(d);
+		try {
+			return sql.format(d);
+		} catch(Exception e) {
+			return null;
+		}
+		
 	}
 	
 	public static Date convertStringToDateSQL(String dateStr)

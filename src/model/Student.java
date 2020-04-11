@@ -27,6 +27,28 @@ public class Student {
 	private String std_phone;
 	private String std_email;
 	
+	public Student() {
+		this.std_id = "";
+		this.std_name = "";
+		this.std_name_mm = "";
+		this.std_gender = "";
+		this.std_ethnic = "";
+		this.std_religion = "";
+		this.std_nrc = "";
+		this.std_dob = null;
+		this.std_mat_id = "";
+		this.std_mat_year = "";
+		this.std_mat_dept = "";
+		this.major_code = "";
+		this.father_nrc = "";
+		this.mother_nrc = "";
+		this.std_birth_place = "";
+		this.std_addr_perm = "";
+		this.std_addr_curr = "";
+		this.std_phone = "";
+		this.std_email = "";
+	}
+	
 	public static Comparator<Student> compStdID = new Comparator<Student>() {
 		
 		@Override

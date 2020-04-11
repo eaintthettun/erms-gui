@@ -59,7 +59,7 @@ public class MotherDao {
 	public static Mother getMotherByNrc(String mother_nrc){
 		try{
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"select * from mother where mother_nrc=?");
+					"select * from mother where mother_nrc=? and mother_nrc!=''");
 			stmt.setString(1, mother_nrc);
 			ResultSet rs=stmt.executeQuery();
 			if(rs.next()){
@@ -84,7 +84,7 @@ public class MotherDao {
 		try {
 
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"update mother set mother_name=?,mother_name_mm=?,mother_ethnic=?,mother_religion=?,mother_birth_place=?,mother_address=? where mother_nrc=?");
+					"update mother set mother_name=?,mother_name_mm=?,mother_ethnic=?,mother_religion=?,mother_birth_place=?,mother_address=? where mother_nrc=? and mother_nrc!=''");
 			stmt.setString(1, mother.getMother_name());
 			stmt.setString(2, mother.getMother_name_mm());
 			stmt.setString(3, mother.getMother_ethnic());
@@ -105,7 +105,7 @@ public class MotherDao {
 		try {
 
 			PreparedStatement stmt=Connector.CON.prepareStatement(
-					"delete from mother where mother_nrc=?");
+					"delete from mother where mother_nrc=? and mother_nrc!=''");
 			stmt.setString(1,mother_nrc);
 			stmt.executeUpdate();
 			return true;
