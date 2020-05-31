@@ -45,13 +45,14 @@ public class AddNewCourseController {
 		
 		comboMajorChosen();
 		
-		this.ancv.getSubjectSection().getTxtSubjectCode().addActionListener(new MyActionListener());
-		this.ancv.getSubjectSection().getTxtSubjectName().addActionListener(new MyActionListener());
-		this.ancv.getSubjectSection().getBtnCreateSubject().addActionListener(new MyActionListener());
-		this.ancv.getCourseSection().getTxtSubjectCode().addActionListener(new MyActionListener());
-		this.ancv.getCourseSection().getBtnAdd().addActionListener(new MyActionListener());
-		this.ancv.getCourseSection().getBtnCreateCourse().addActionListener(new MyActionListener());
-		this.ancv.getCourseSection().getComboMajor().addActionListener(new MyActionListener());
+		MyActionListener action = new MyActionListener();
+		this.ancv.getSubjectSection().getTxtSubjectCode().addActionListener(action);
+		this.ancv.getSubjectSection().getTxtSubjectName().addActionListener(action);
+		this.ancv.getSubjectSection().getBtnCreateSubject().addActionListener(action);
+		this.ancv.getCourseSection().getTxtSubjectCode().addActionListener(action);
+		this.ancv.getCourseSection().getBtnAdd().addActionListener(action);
+		this.ancv.getCourseSection().getBtnCreateCourse().addActionListener(action);
+		this.ancv.getCourseSection().getComboMajor().addActionListener(action);
 		
 		this.ancv.getCourseSection().getBtnAdd().setEnabled(false);
 		
@@ -203,7 +204,7 @@ public class AddNewCourseController {
 		
 		if(Checker.checkRequired(sub_name)){
 			this.warnings.add("Please enter subject name");
-		}else if(sub_name.length()>100){
+		}else if(sub_name.length()>300){
 			this.warnings.add("Subject Name is too LONG!");
 		}
 		
